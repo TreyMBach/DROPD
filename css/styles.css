@@ -33,6 +33,19 @@ body{
     cursor: pointer;
 }
 
+#homeNavText:active,
+#bandNavText:active,
+#mediaNavText:active,
+#shopNavText:active,
+#tourNavText:active{
+    color: grey;
+    cursor: pointer;
+}
+
+.disable-select {
+    user-select: none;
+}
+
 .coverContainer{
     display: flex;
     justify-content: center;
