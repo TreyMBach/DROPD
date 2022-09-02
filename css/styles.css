@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    background: black;
+}
+
+.titleContainer{
+    color: orange;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.navbarContainer{
+    color: orange;
+    padding: 0;
+}
+
+
+.navbarText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+
+#homeNavText:hover,
+#bandNavText:hover,
+#mediaNavText:hover,
+#shopNavText:hover,
+#tourNavText:hover{
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.coverContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.bandContainer{
+    border: white 10px solid;
+    padding: 10px;
+    margin: 100px;
+    background: grey;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#KJContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ThomasContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#CoreyContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#BobContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bandImg{
+    max-width: 50%;
+}
