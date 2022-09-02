@@ -76,3 +76,18 @@ body{
 .bandImg{
     max-width: 50%;
 }
+
+@media screen and (max-width: 768px) {
+    .bandContainer {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .coverContainer{
+        flex-direction: column;
+    }
+    .navbarText{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
