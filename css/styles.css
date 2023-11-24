@@ -1,27 +1,34 @@
-
-
-/* Reset some default styles */
-body, h1, h2, p, ul {
+/* General styles */
+body, h1, h2, p, ul, li, a {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Set background and text styles */
+/* Use Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Open+Sans:wght@400;700&display=swap');
+
+/* Body and typography styles */
 body {
     background-color: #000;
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
 }
 
 /* Header styles */
 header {
-    background-color: #333;
+    background-color: #222;
     padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
     text-align: center;
+    padding: 10px;
 }
 
 nav li {
@@ -32,63 +39,227 @@ nav li {
 nav a {
     color: #fff;
     text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff4500;
 }
 
 /* Hero section styles */
 #hero {
     text-align: center;
     padding: 100px 0;
-    background-image: url('../images/dropd-background.jpg');
-    background-size: cover;
-    background-position: center;
+    background-image: url('../images/dropd-backgroundlogo.jpg'); /* path to your logo image */
+    background-size: contain; /* or 'auto' if you don't want it to stretch */
+    background-position: center center; /* adjust this as needed to position your logo */
+    background-repeat: no-repeat; /* prevents the image from repeating */
+    height: 400px; /* set a fixed height or as needed to contain the logo */
 }
 
 #hero h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
-/* .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff4500;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+/* Rest of the styles... */
 
-.cta-button:hover {
-    background-color: #ff6b00;
-} */
-
-/* Other section styles (about, music, tour, contact) */
-section {
-    padding: 50px 0;
+/* Footer styles */
+footer {
+    background-color: #222;
     text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
 }
 
-#dropDFacebook {
-    /* Remove the properties of defualt anchor tag */
-    text-decoration: none;
-    color: #fff;
-    /* Add the properties of the button */
-    display: inline-block;
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* About Section */
+
+/* Cover Songs */
+#music .song-list-container {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    overflow-x: auto; /* For responsiveness */
+}
+
+#music table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#music th, #music td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd; /* For a line under each row */
+}
+
+#music th {
+    background-color: #333; /* Dark grey background for the table headers */
+    color: #ff4500; /* Orange text color for headers */
+}
+
+#music td {
+    color: #fff; /* White text color for the table data */
+}
+
+#music tr:hover {
+    background-color: #555; /* Slightly darker row background on hover */
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    #music table {
+        display: block;
+    }
+}
+
+
+
+#schedule {
+    background-color: #f5f5f5; /* Light gray background */
+    color: #333; /* Dark text for contrast */
+    text-align: center;
+    padding: 50px 0;
+}
+
+#schedule h2 {
+    font-size: 3rem; /* Large font size for the heading */
+    margin-bottom: 30px;
+}
+
+.tour-dates {
+    max-width: 600px; /* Set a max-width for the schedule */
+    margin: 0 auto;
+}
+
+.tour-date {
+    border-bottom: 1px solid #ddd; /* Separator for each date */
+    padding: 20px 0;
+}
+
+.tour-date:last-child {
+    border-bottom: none; /* No border for the last child */
+}
+
+.date, .venue, .location, .time {
+    margin: 5px 0;
+    font-size: 1.2rem; /* Smaller font size for details */
+}
+
+.buttons a {
+    display: inline-block; /* Align buttons side by side */
+    margin: 10px;
     padding: 10px 20px;
-    background-color: #3b5998;
-    border-radius: 5px;
+    border: 1px solid #333; /* Border for buttons */
+    color: #333;
+    text-decoration: none; /* No underline */
+    transition: all 0.3s ease;
+}
+
+.buttons a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.view-all {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none; /* No underline */
     transition: background-color 0.3s ease;
 }
 
-h2 {
-    font-size: 2rem;
+.view-all:hover {
+    background-color: #555;
+}
+
+/* General styles */
+body {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    /* ... */
+}
+
+/* About Section */
+#about, #music, #contact {
+    padding: 50px 0;
+    background-color: #333; /* Dark grey for sections */
+}
+
+#about h2, #music h2, #contact h2 {
+    color: #ff4500; /* Orange color for headings */
     margin-bottom: 20px;
+}
+
+/* Cover Songs Section */
+#music {
+    padding: 50px 0;
+    background-color: #333; /* Dark grey for sections */
+}
+
+/* Tour Date Section */
+#schedule .tour-date {
+    /* ... */
+    color: #ff4500; /* Orange details */
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    background-color: #333; /* Dark grey for sections */
+}
+
+/* Contact buttons */
+.cta-button, .cta-button.facebook {
+    padding: 10px 20px;
+    border: 1px solid #ff4500; /* Orange border for buttons */
+    color: #ff4500;
+    background-color: transparent; /* Clear background */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover, .cta-button.facebook:hover {
+    color: #fff;
+    background-color: #ff4500; /* Orange background on hover */
+}
+
+/* Facebook button specific style if needed */
+.facebook {
+    background-color: #3b5998; /* Facebook blue, change if you want orange */
+    border-color: #3b5998; /* Facebook blue border */
 }
 
 /* Footer styles */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+    background-color: #222; /* Very dark grey footer */
+    padding: 20px 0;
+}
+
+footer p {
+    color: #ff4500; /* Orange text color for the footer */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    /* ... */
 }
