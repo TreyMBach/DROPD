@@ -27,13 +27,12 @@ header {
 
 nav ul {
     list-style: none;
-    text-align: center;
-    padding: 10px;
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
 }
 
 nav li {
-    display: inline;
-    margin-right: 20px;
+    padding: 10px 5px; /* Increase padding to add more space around each item */
 }
 
 nav a {
@@ -42,7 +41,10 @@ nav a {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.2rem;
     transition: color 0.3s ease;
+    padding: 8px 12px; /* Increase padding to make the tap targets larger */
+    display: block; /* Makes the anchor fill the li for a larger click/tap area */
 }
+
 
 nav a:hover {
     color: #ff4500;
@@ -65,7 +67,41 @@ nav a:hover {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-/* Rest of the styles... */
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    header {
+        position: static; /* Reset to default positioning */
+    }
+
+    nav ul {
+        display: flex; /* Creates a flexbox layout */
+        flex-direction: row; /* Aligns items horizontally */
+        justify-content: center; /* Centers the items */
+        flex-wrap: wrap; /* Allows items to wrap as needed */
+    }
+
+    nav li {
+        display: inline-block; /* Places links in a horizontal line */
+        margin-right: 20px; /* Adds space between links */
+    }
+
+    nav li:last-child {
+        margin-right: 0; /* Removes margin from the last item */
+    }
+
+    /* Adjust hero image for mobile */
+    #hero {
+        padding: 50px 0; /* Reduce padding */
+        height: 200px; /* Reduce height */
+        background-size: cover; /* Ensure the background covers the area */
+        background-position: center; /* Center the background image */
+    }
+
+    /* Footer styles */
+    footer {
+        position: static; /* Reset to default positioning */
+    }
+}
 
 /* Footer styles */
 footer {
