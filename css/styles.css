@@ -27,12 +27,13 @@ header {
 
 nav ul {
     list-style: none;
-    padding: 0; /* Reset padding */
-    margin: 0; /* Reset margin */
+    text-align: center;
+    padding: 10px;
 }
 
 nav li {
-    padding: 10px 5px; /* Increase padding to add more space around each item */
+    display: inline;
+    margin-right: 20px;
 }
 
 nav a {
@@ -41,10 +42,7 @@ nav a {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.2rem;
     transition: color 0.3s ease;
-    padding: 8px 12px; /* Increase padding to make the tap targets larger */
-    display: block; /* Makes the anchor fill the li for a larger click/tap area */
 }
-
 
 nav a:hover {
     color: #ff4500;
@@ -74,15 +72,18 @@ nav a:hover {
     }
 
     nav ul {
-        display: flex; /* Creates a flexbox layout */
-        flex-direction: row; /* Aligns items horizontally */
-        justify-content: center; /* Centers the items */
-        flex-wrap: wrap; /* Allows items to wrap as needed */
+        list-style: none;
+        padding: 0; /* Reset padding */
+        margin: 0; /* Reset margin */
     }
-
-    nav li {
-        display: inline-block; /* Places links in a horizontal line */
-        margin-right: 20px; /* Adds space between links */
+    
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 1.2rem;
+        transition: color 0.3s ease; /* Increase padding to make the tap targets larger */
+        display: block; /* Makes the anchor fill the li for a larger click/tap area */
     }
 
     nav li:last-child {
