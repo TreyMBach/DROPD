@@ -191,6 +191,11 @@ footer {
     overflow-x: auto; /* For responsiveness */
 }
 
+#music h2, p {
+    text-align: center;
+}
+
+
 #music table {
     width: 100%;
     border-collapse: collapse;
